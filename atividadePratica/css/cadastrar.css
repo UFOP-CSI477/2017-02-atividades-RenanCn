@@ -1,0 +1,36 @@
+
+body{
+  background-color: #ECE8DF;
+}
+
+h2{
+  font-family: Arial;
+  color: #002B38;
+  background-color: #AB8959;
+  text-align: center;
+  font-weight: bold;
+}
+
+label{
+  font-family: Arial;
+  color: #002B38;
+}
+
+input[type=text], input[type=password], select, option{
+  text-align: justify;
+  font-family: Arial;
+  border-style: solid;
+  border-color: #AB8959;
+  box-shadow: 1px 1px 4px #AB8959;
+  background: white;
+  color: #002B38
+}
+
+input[type=submit], input[type=reset]{
+  font-family: Arial;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #002B38;
+  background: #ECE8DF;
+  color: #002B38
+}
