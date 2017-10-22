@@ -1,0 +1,25 @@
+#menu{
+    font-family: Arial;
+    color: #f44336;
+}
+
+h2{
+  font-family: Arial;
+  color: white;
+  background-color: #f44336;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+}
+
+body{
+  text-align: center;
+}
+
+a{
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+}
