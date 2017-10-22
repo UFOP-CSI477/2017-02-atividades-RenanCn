@@ -1,9 +1,12 @@
 #menu{
-    font-family: Arial;
-    color: #f44336;
+  font-family: Arial;
+  color: #f44336;
 }
 
 h2{
+  margin-top: -0.5em;
+  margin-left: -5em;
+  margin-right: -5em;
   font-family: Arial;
   color: white;
   background-color: #f44336;
