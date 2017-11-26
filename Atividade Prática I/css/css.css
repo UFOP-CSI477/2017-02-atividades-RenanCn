@@ -30,7 +30,9 @@ a, a:hover, a:focus{
 
 .fundo-menu{
   background-color: darkred;
-  width: 150px;
+  width: 175px;
+  font-size: 16px;
+  border-radius: 0px 20px 20px 0px;
 }
 
 .fundo{
