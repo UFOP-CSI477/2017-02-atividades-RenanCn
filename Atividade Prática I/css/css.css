@@ -1,17 +1,38 @@
 .rodape{
-  position: absolute;
-  bottom: 0;
+  clear: both;
+  position:fixed;
   background-color: darkred;
   width: 100%;
   color: white;
+  bottom: 0px;
+
 }
 
 .margem-esquerda{
-  margin-top: 1rem;
   margin-left: 2rem;
 }
 
 .margem-direita{
-  margin-top: 1rem;
   margin-right: 2rem;
+}
+
+.margem-acima{
+  margin-top: 1rem;
+}
+
+footer{
+  bottom: 0px;
+}
+
+a, a:hover, a:focus{
+  color: white;
+}
+
+.fundo-menu{
+  background-color: darkred;
+  width: 150px;
+}
+
+.fundo{
+  background: lightgray;
 }
