@@ -1,3 +1,11 @@
+footer{
+  bottom: 0px;
+}
+
+a, a:hover, a:focus{
+  color: white;
+}
+
 .rodape{
   clear: both;
   position:fixed;
@@ -18,14 +26,6 @@
 
 .margem-acima{
   margin-top: 1rem;
-}
-
-footer{
-  bottom: 0px;
-}
-
-a, a:hover, a:focus{
-  color: white;
 }
 
 .fundo-menu{
