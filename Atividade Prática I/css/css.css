@@ -7,7 +7,6 @@ a, a:hover, a:focus{
 }
 
 .rodape{
-  clear: both;
   position:fixed;
   background-color: darkred;
   width: 100%;
