@@ -2,6 +2,14 @@
   position: absolute;
   bottom: 0;
   background-color: darkred;
-  width: 100%;
+  width: 99%;
   color: white;
+}
+
+.margem-esquerda{
+  margin-left: 3rem;
+}
+
+.margem-direita{
+  margin-right: 3rem;
 }
