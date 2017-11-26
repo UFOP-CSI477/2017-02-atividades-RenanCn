@@ -32,6 +32,7 @@ a, a:hover, a:focus{
   width: 175px;
   font-size: 16px;
   border-radius: 0px 20px 20px 0px;
+  color: white;
 }
 
 .fundo{
