@@ -11,8 +11,7 @@ a, a:hover, a:focus{
   background-color: darkred;
   width: 100%;
   color: white;
-  bottom: 0px;
-
+  bottom: 0;
 }
 
 .margem-esquerda{
@@ -37,4 +36,23 @@ a, a:hover, a:focus{
 
 .fundo{
   background: lightgray;
+}
+
+.fundo2{
+  background: #D5E5F4;
+}
+
+#inputArea input[type="text"], #inputArea textarea{
+      font-family: Arial, Sans-Serif;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+    padding: 4px;
+    border: solid 1px #85b1de;
+    width: 300px;
+    background-color: #EDF2F7;
+}
+
+.fonte{
+    font-family: Arial, Sans-Serif;
 }
