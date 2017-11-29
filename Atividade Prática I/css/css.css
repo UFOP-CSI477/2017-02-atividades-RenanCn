@@ -6,8 +6,9 @@ a, a:hover, a:focus{
   color: white;
 }
 
+
 .rodape{
-  position:fixed;
+  position: fixed;
   background-color: darkred;
   width: 100%;
   color: white;
@@ -43,7 +44,7 @@ a, a:hover, a:focus{
 }
 
 #inputArea input[type="text"], #inputArea textarea{
-      font-family: Arial, Sans-Serif;
+    font-family: Arial, Sans-Serif;
     font-size: 13px;
     margin-bottom: 5px;
     display: block;
@@ -55,4 +56,12 @@ a, a:hover, a:focus{
 
 .fonte{
     font-family: Arial, Sans-Serif;
+}
+
+.fundo-tabela-dourado{
+  background-color: #D2C74F;
+}
+
+.fundo-tabela-azul{
+  background-color: #5A95DE;
 }
