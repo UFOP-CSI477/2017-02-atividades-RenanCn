@@ -7,18 +7,69 @@
 
     <script type="text/javascript">
       function imc(){
+
         peso = parseFloat(document.dados.peso.value)
         altura = parseFloat(document.dados.altura.value)
 
-        imc = peso / (altura*altura)
-
-        if (imc < 18.5) {
-
+        if (document.dados.peso.value.length == 0 || isNaN(peso)) {
+          document.getElementById("grupoPeso").classList.add("has-error")
+          document.getElementById("alertaPeso").style.display = "block"
+          document.dados.peso.value = ""
+          document.dados.peso.focus()
+          return
         }
 
-        document.dados.resultado.value = "IMC = " + imc.toFixed(2)
+        document.getElementById("grupoPeso").classList.remove("has-error")
+        document.getElementById("alertaPeso").style.display = "none"
 
+        if (document.dados.altura.value.length == 0 || isNaN(altura)) {
+          document.getElementById("grupoAltura").classList.add("has-error")
+          document.getElementById("alertaAltura").style.display = "block"
+          document.dados.altura.value = ""
+          document.dados.altura.focus()
+          return
+        }
+
+        document.getElementById("grupoAltura").classList.remove("has-error")
+        document.getElementById("alertaAltura").style.display = "none"
+
+        var imc = peso / (altura*altura)
+        var classificacao = ""
+
+        if (imc < 18.5) {
+          classificacao = "Subnutrição"
+        }
+        else if (imc >= 18.6 && imc <= 24.9) {
+          classificacao = "Peso saudável"
+        }
+        else if (imc >= 25 && imc <= 29.9) {
+          classificacao = "Sobrepeso"
+        }
+        else if (imc >= 30 && imc <= 34.9) {
+          classificacao = "Obesidade grau 1"
+        }
+        else if (imc >= 35 && imc <= 39.9) {
+          classificacao = "Obesidade grau 2"
+        }
+        else {
+          classificacao = "Obesidade grau 3"
+        }
+
+        document.dados.calculo.value = "IMC: " + imc.toFixed(2) + "\t\tClassificação: " + classificacao
+
+        var p1 = 18.6 * altura * altura
+        var p2 = 24.9 * altura * altura
+
+        document.dados.pesoIdeal.value = "P1: " + p1.toFixed(2) + "\t\tP2: " + p2.toFixed(2)
       }
+
+      function limpar(){
+        document.getElementById("grupoPeso").classList.remove("has-error")
+        document.getElementById("alertaPeso").style.display = "none"
+        document.getElementById("grupoAltura").classList.remove("has-error")
+        document.getElementById("alertaAltura").style.display = "none"
+      }
+
     </script>
 
   </head>
@@ -35,7 +86,7 @@
         <label for="peso">Peso</label>
         <input type="text" name="peso" class="form-control">
 
-        <div class="alert alert-danger" style="display: none" id="peso">
+        <div class="alert alert-danger" style="display: none" id="alertaPeso">
           Informe o peso corretamente.
         </div>
       </div>
@@ -44,19 +95,25 @@
         <label for="altura">Altura</label>
         <input type="text" name="altura" class="form-control">
 
-        <div class="alert alert-danger" style="display: none" id="altura">
+        <div class="alert alert-danger" style="display: none" id="alertaAltura">
           Informe a altura corretamente.
         </div>
         <br>
+
         <div id="grupoCalculo" class="form-group">
           <label for="resultado">Resultado</label>
-          <input type="text" name="resultado" class="form-control" disabled="disabled">
+          <input type="text" name="calculo" class="form-control" disabled="disabled">
+        </div>
+
+        <div id="grupoPesoIdeal" class="form-group">
+          <label for="resultado">Peso Ideal</label>
+          <input type="text" name="pesoIdeal" class="form-control" disabled="disabled">
         </div>
 
       </div>
 
       <button type="button" name="button" onclick="imc()" class="btn btn-primary">Calcular</button>
-      <button type="reset" class="btn btn-danger">Limpar</button>
+      <button type="reset" onclick="limpar()" class="btn btn-danger">Limpar</button>
 
 
     </form>
