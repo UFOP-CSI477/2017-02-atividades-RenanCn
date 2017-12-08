@@ -7,10 +7,14 @@
 
     <script type="text/javascript">
       function imc(){
-        peso = parseFloat(document.dados.peso1.value)
-        altura = parseFloat(document.dados.altura1.value)
+        peso = parseFloat(document.dados.peso.value)
+        altura = parseFloat(document.dados.altura.value)
 
         imc = peso / (altura*altura)
+
+        if (imc < 18.5) {
+
+        }
 
         window.alert("Peso: \t" + peso + "\nAltura: \t" + altura + "\nIMC: \t" + imc.toFixed(2))
       }
@@ -26,18 +30,18 @@
 
     <form name="dados">
 
-      <div id="peso" class="form-group">
+      <div id="grupoPeso" class="form-group">
         <label for="peso">Peso</label>
-        <input type="text" name="peso1" class="form-control">
+        <input type="text" name="peso" class="form-control">
 
         <div class="alert alert-danger" style="display: none" id="peso">
           Informe o peso corretamente.
         </div>
       </div>
 
-      <div id="altura" class="form-group">
+      <div id="grupoAltura" class="form-group">
         <label for="altura">Altura</label>
-        <input type="text" name="altura1" class="form-control">
+        <input type="text" name="altura" class="form-control">
 
         <div class="alert alert-danger" style="display: none" id="altura">
           Informe a altura corretamente.
