@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href=".\bootstrap-3.3.7-dist\css\bootstrap.css">
+
+    <script type="text/javascript">
+      function imc(){
+        peso = parseFloat(document.dados.peso1.value)
+        altura = parseFloat(document.dados.altura1.value)
+
+        imc = peso / (altura*altura)
+
+        window.alert("Peso: \t" + peso + "\nAltura: \t" + altura + "\nIMC: \t" + imc.toFixed(2))
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron text-center" style="background-color: powderblue">
+        <h1>Calculo de IMC</h1>
+      </div>
+
+    <form name="dados">
+
+      <div id="peso" class="form-group">
+        <label for="peso">Peso</label>
+        <input type="text" name="peso1" class="form-control">
+
+        <div class="alert alert-danger" style="display: none" id="peso">
+          Informe o peso corretamente.
+        </div>
+      </div>
+
+      <div id="altura" class="form-group">
+        <label for="altura">Altura</label>
+        <input type="text" name="altura1" class="form-control">
+
+        <div class="alert alert-danger" style="display: none" id="altura">
+          Informe a altura corretamente.
+        </div>
+
+      </div>
+
+      <button type="button" name="button" onclick="imc()" class="btn btn-primary">Calcular</button>
+      <button type="reset" class="btn btn-danger">Limpar</button>
+
+
+    </form>
+
+    </div>
+
+
+
+  </body>
+</html>
