@@ -16,7 +16,8 @@
 
         }
 
-        window.alert("Peso: \t" + peso + "\nAltura: \t" + altura + "\nIMC: \t" + imc.toFixed(2))
+        document.dados.resultado.value = "IMC = " + imc.toFixed(2)
+
       }
     </script>
 
@@ -45,6 +46,11 @@
 
         <div class="alert alert-danger" style="display: none" id="altura">
           Informe a altura corretamente.
+        </div>
+        <br>
+        <div id="grupoCalculo" class="form-group">
+          <label for="resultado">Resultado</label>
+          <input type="text" name="resultado" class="form-control" disabled="disabled">
         </div>
 
       </div>
