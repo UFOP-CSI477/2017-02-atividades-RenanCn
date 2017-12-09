@@ -11,7 +11,7 @@
         peso = parseFloat(document.dados.peso.value)
         altura = parseFloat(document.dados.altura.value)
 
-        if (document.dados.peso.value.length == 0 || isNaN(peso)) {
+        if (document.dados.peso.value.length == 0 || isNaN(peso) || document.dados.peso.value <= 0) {
           document.getElementById("grupoPeso").classList.add("has-error")
           document.getElementById("alertaPeso").style.display = "block"
           document.dados.peso.value = ""
@@ -22,7 +22,7 @@
         document.getElementById("grupoPeso").classList.remove("has-error")
         document.getElementById("alertaPeso").style.display = "none"
 
-        if (document.dados.altura.value.length == 0 || isNaN(altura)) {
+        if (document.dados.altura.value.length == 0 || isNaN(altura) || document.dados.altura.value <= 0) {
           document.getElementById("grupoAltura").classList.add("has-error")
           document.getElementById("alertaAltura").style.display = "block"
           document.dados.altura.value = ""
@@ -55,7 +55,7 @@
           classificacao = "Obesidade grau 3"
         }
 
-        document.dados.calculo.value = "IMC: " + imc.toFixed(2) + "\tClassificação: " + classificacao
+        document.dados.calculo.value = "IMC: " + imc.toFixed(2) + "\t\tClassificação: " + classificacao
 
         var p1 = 18.6 * altura * altura
         var p2 = 24.9 * altura * altura
