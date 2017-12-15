@@ -3,8 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>IMC - jQuery</title>
+    <link rel="stylesheet" href=".\bootstrap\bootstrap.css">
+    <script src=".\js\jquery-3.2.1.js"></script>
+    <script src=".\js\calculo.js"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron text-center" style="background-color: powderblue">
+        <h1>Calculo de IMC</h1>
+      </div>
 
+    <form name="dados">
+
+      <div id="grupoPeso" class="form-group">
+        <label for="peso">Peso</label>
+        <input type="text" name="peso" class="form-control">
+
+        <div class="alert alert-danger" style="display: none" id="alertaPeso">
+          Informe o peso corretamente.
+        </div>
+      </div>
+
+      <div id="grupoAltura" class="form-group">
+        <label for="altura">Altura</label>
+        <input type="text" name="altura" class="form-control">
+
+        <div class="alert alert-danger" style="display: none" id="alertaAltura">
+          Informe a altura corretamente.
+        </div>
+        <br>
+
+        <div id="grupoCalculo" class="form-group">
+          <label for="resultado">Resultado</label>
+          <input type="text" name="calculo" class="form-control" disabled="disabled">
+        </div>
+
+        <div id="grupoPesoIdeal" class="form-group">
+          <label for="resultado">Peso Ideal</label>
+          <input type="text" name="pesoIdeal" class="form-control" disabled="disabled">
+        </div>
+
+      </div>
+
+      <button type="button" name="button" onclick="imc()" class="btn btn-primary">Calcular</button>
+      <button type="reset" onclick="limpar()" class="btn btn-danger">Limpar</button>
+
+
+    </form>
+
+    </div>
   </body>
 </html>
