@@ -32,30 +32,48 @@ $(document).ready(function(){
     var res = Math.log10(amplitude) + 3 * Math.log10(8 * intervalo) - 2.92;
 
     var efeito;
-    res = res.toFixed(1)
+    res = res.toFixed(1);
 
     if (res < 3.5){
       efeito = "Geralmente não sentido, mas gravado.";
+      $("img[alt='wtf']").hide();
+      $("img[alt='q']").hide();
+      $("img[alt='neutral']").show();
     }
     else if (res >= 3.5 && res <= 5.4)
     {
       efeito = "Às vezes sentido, mas raramente causa danos.";
+      $("img[alt='wtf']").hide();
+      $("img[alt='q']").hide();
+      $("img[alt='neutral']").show();
     }
     else if (res >=5.5 && res <= 6.0)
     {
       efeito = "No máximo causa pequenos danos a prédios bem construídos, mas pode danificar seriamente casas mal construídas em regiões próximas.";
+      $("img[alt='neutral']").hide();
+      $("img[alt='q']").hide();
+      $("img[alt='wtf']").show();
     }
     else if (res >= 6.1 && res <= 6.9)
     {
       efeito = "Pode ser destrutivo em áreas em torno de até 100 km do epicentro.";
+      $("img[alt='neutral']").hide();
+      $("img[alt='q']").hide();
+      $("img[alt='wtf']").show();
     }
     else if (res >= 7.0 && res <= 7.9)
     {
       efeito = "Grande terremoto. Pode causar sérios danos numa grande faixa.";
+      $("img[alt='neutral']").hide();
+      $("img[alt='wtf']").hide();
+      $("img[alt='q']").show();
     }
     else if (res > 8)
     {
       efeito = "Enorme terremoto. Pode causa graves danos em muitas áreas mesmo que estejam a centenas de quilômetros.";
+      $("img[alt='neutral']").hide();
+      $("img[alt='wtf']").hide();
+      $("img[alt='q']").show();
     }
 
     var terremoto = "• Magnetude:\n" + res + "\n\n• Efeitos:\n" + efeito;
