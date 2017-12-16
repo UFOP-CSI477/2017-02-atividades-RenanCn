@@ -8,3 +8,43 @@
   padding: 10px;
   border-radius: 15px;
 }
+
+.prg-border{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: lightgray;
+  padding: 10px;
+}
+/***************************************/
+.prg-border-purple{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #9365B8;
+  padding: 10px;
+}
+
+.prg-border-red{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #EB6B56;
+  padding: 10px;
+}
+
+.prg-border-green{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #61BD6D;
+  padding: 10px;
+}
+
+.prg-border-yellow{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #F7DA64;
+  padding: 10px;
+}

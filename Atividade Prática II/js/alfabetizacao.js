@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $("button[name='calcular']").click(function(){
+  $("button[name='confirmar']").click(function(){
 
     var ischecked_1 = $("input[name=radio1]:checked").val();
     var ischecked_2 = $("input[name=radio2]:checked").val();
@@ -47,7 +47,7 @@ $(document).ready(function(){
     $("#badge16").css({'background-color': "#2DCC70"});
 
 
-    $("h5[name='pontuacao']").text("Pontuação: você fez " + score + " pontos!");
+    $("h5[name='pontuacao']").text("Pontuação: você fez " + score + " ponto(s)!");
   });
 
   $("button[name='limpar']").click(function(){
@@ -61,7 +61,72 @@ $(document).ready(function(){
 
   });
 
+// ----------------------------------- //
+
+var numP=0;
+
+$("p").click(function(){
+    $(this).removeClass();
+  if (numP == 0) {
+    $(this).addClass("prg-border-purple");
+    numP+=1;
+  }
+  else if (numP == 1){
+    $(this).toggleClass("prg-border-red")
+    numP+=1;
+  }
+  else if (numP == 2){
+    $(this).toggleClass("prg-border-green")
+    numP+=1;
+  }
+  else {
+    $(this).toggleClass("prg-border-yellow")
+    numP = 0
+  }
 });
 
-/*
-*/
+var numImg = 0
+
+$("img").click(function(){
+    $(this).removeClass();
+  if (numImg == 0) {
+    $(this).addClass("prg-border-purple");
+    numImg+=1;
+  }
+  else if (numImg == 1){
+    $(this).toggleClass("prg-border-red")
+    numImg+=1;
+  }
+  else if (numImg == 2){
+    $(this).toggleClass("prg-border-green")
+    numImg+=1;
+  }
+  else {
+    $(this).toggleClass("prg-border-yellow")
+    numImg = 0
+  }
+});
+
+
+$("button[name='confirmar2']").click(function(){
+
+    if($("p[id='triangulo']").attr('class') == $("img[alt='triangulo']").attr('class')){
+      //alert("gg wp")
+
+    }
+    if($("p[id='quadrado']").attr('class') == $("img[alt='quadrado']").attr('class')){
+
+    }
+    if($("p[id='circulo']").attr('class') == $("img[alt='circulo']").attr('class')){
+
+    }
+    if($("p[id='retangulo']").attr('class') == $("img[alt='retangulo']").attr('class')){
+
+    }
+
+
+
+});
+
+
+}); // document ready
