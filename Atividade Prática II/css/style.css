@@ -9,11 +9,19 @@
   border-radius: 15px;
 }
 
-.prg-border{
+.prg-border-1{
   border-radius: 15px;
   width: 150px;
   text-align: center;
-  background-color: lightgray;
+  background-color: #D3D3D3;
+  padding: 10px;
+}
+
+.prg-border-2{
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #D4D4D4;
   padding: 10px;
 }
 /***************************************/

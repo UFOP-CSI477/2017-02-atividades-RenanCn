@@ -51,6 +51,7 @@ $(document).ready(function(){
   });
 
   $("button[name='limpar']").click(function(){
+
     $("h5[name='pontuacao']").text("Pontuação: ");
 
     var i=0;
@@ -110,19 +111,47 @@ $("img").click(function(){
 
 $("button[name='confirmar2']").click(function(){
 
+    var score2 = 0;
+
     if($("p[id='triangulo']").attr('class') == $("img[alt='triangulo']").attr('class')){
       //alert("gg wp")
-
+      score2+=1;
     }
     if($("p[id='quadrado']").attr('class') == $("img[alt='quadrado']").attr('class')){
-
+      score2+=1;
     }
     if($("p[id='circulo']").attr('class') == $("img[alt='circulo']").attr('class')){
-
+      score2+=1;
     }
     if($("p[id='retangulo']").attr('class') == $("img[alt='retangulo']").attr('class')){
-
+      score2+=1;
     }
+
+    $("h5[name='pontuacao2']").text("Pontuação: você fez " + score2 + " ponto(s)!");
+
+});
+
+$("button[name='limpar2']").click(function(){
+
+  $("h5[name='pontuacao2']").text("Pontuação: ");
+
+  $("p[id='triangulo']").removeClass()
+  $("p[id='triangulo']").addClass("prg-border-1")
+  $("p[id='quadrado']").removeClass()
+  $("p[id='quadrado']").addClass("prg-border-1")
+  $("p[id='circulo']").removeClass()
+  $("p[id='circulo']").addClass("prg-border-1")
+  $("p[id='retangulo']").removeClass()
+  $("p[id='retangulo']").addClass("prg-border-1")
+
+  $("img[alt='triangulo']").removeClass()
+  $("img[alt='triangulo']").addClass("prg-border-2")
+  $("img[alt='quadrado']").removeClass()
+  $("img[alt='quadrado']").addClass("prg-border-2")
+  $("img[alt='circulo']").removeClass()
+  $("img[alt='circulo']").addClass("prg-border-2")
+  $("img[alt='retangulo']").removeClass()
+  $("img[alt='retangulo']").addClass("prg-border-2")
 
 
 
