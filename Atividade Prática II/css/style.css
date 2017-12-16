@@ -15,6 +15,7 @@
   text-align: center;
   background-color: #D3D3D3;
   padding: 10px;
+  cursor: pointer;
 }
 
 .prg-border-2{
@@ -23,6 +24,7 @@
   text-align: center;
   background-color: #D4D4D4;
   padding: 10px;
+  cursor: pointer;
 }
 /***************************************/
 .prg-border-purple{
@@ -31,6 +33,8 @@
   text-align: center;
   background-color: #9365B8;
   padding: 10px;
+  cursor: pointer;
+
 }
 
 .prg-border-red{
@@ -39,6 +43,7 @@
   text-align: center;
   background-color: #EB6B56;
   padding: 10px;
+  cursor: pointer;
 }
 
 .prg-border-green{
@@ -47,6 +52,7 @@
   text-align: center;
   background-color: #61BD6D;
   padding: 10px;
+  cursor: pointer;
 }
 
 .prg-border-yellow{
@@ -55,4 +61,5 @@
   text-align: center;
   background-color: #F7DA64;
   padding: 10px;
+  cursor: pointer;
 }
