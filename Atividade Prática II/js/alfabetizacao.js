@@ -112,45 +112,57 @@ $("img").click(function(){
 $("button[name='confirmar2']").click(function(){
 
     var score2 = 0;
-    var erro = "Erros: ";
+    var triangulo = "";
+    var quadrado = "";
+    var circulo = "";
+    var retangulo = "";
 
     if($("p[id='triangulo']").attr('class') == $("img[alt='triangulo']").attr('class')){
       //alert("gg wp")
       score2+=1;
+      triangulo = "Você ACERTOU o triângulo! :D"
     }
     else {
-      erro = " |Triângulo| "
+      triangulo = "Você ERROU o triângulo! :("
     }
     if($("p[id='quadrado']").attr('class') == $("img[alt='quadrado']").attr('class')){
       score2+=1;
+      quadrado = "Você ACERTOU o quadrado! :D"
     }
     else {
-      erro = erro + " |Quadrado| "
+      quadrado = "Você ERROU o quadrado! :("
     }
     if($("p[id='circulo']").attr('class') == $("img[alt='circulo']").attr('class')){
       score2+=1;
+      circulo = "Você ACERTOU o circulo! :D"
     }
     else {
-      erro = erro + " |Círculo| "
+      circulo = "Você ERROU o circulo! :("
     }
     if($("p[id='retangulo']").attr('class') == $("img[alt='retangulo']").attr('class')){
       score2+=1;
+      retangulo = "Você ACERTOU o retângulo! :D"
     }
     else {
-      erro = erro + " |Retântgulo| "
+      retangulo = "Você ERROU o retângulo! :("
     }
 
 
     $("h5[name='pontuacao2']").text("Pontuação: você fez " + score2 + " ponto(s)!");
-    $("h6[name='pontuacao3']").text("Veja o que você errou:" + erro);
+    $("h6[name='pontuacao3']").text(triangulo);
+    $("h6[name='pontuacao4']").text(quadrado);
+    $("h6[name='pontuacao5']").text(circulo);
+    $("h6[name='pontuacao6']").text(retangulo);
 
 });
 
 $("button[name='limpar2']").click(function(){
 
   $("h5[name='pontuacao2']").text("Pontuação: ");
-  $("h6[name='pontuacao3']").text("Veja o que você errou: até agora você não errou nada!");
-  $("h6[name='pontuacao3']").text(":D");
+  $("h6[name='pontuacao3']").text("");
+  $("h6[name='pontuacao4']").text("");
+  $("h6[name='pontuacao5']").text("");
+  $("h6[name='pontuacao6']").text("");
 
   $("p[id='triangulo']").removeClass()
   $("p[id='triangulo']").addClass("prg-border-1")
