@@ -112,28 +112,45 @@ $("img").click(function(){
 $("button[name='confirmar2']").click(function(){
 
     var score2 = 0;
+    var erro = "Erros: ";
 
     if($("p[id='triangulo']").attr('class') == $("img[alt='triangulo']").attr('class')){
       //alert("gg wp")
       score2+=1;
     }
+    else {
+      erro = " |Triângulo| "
+    }
     if($("p[id='quadrado']").attr('class') == $("img[alt='quadrado']").attr('class')){
       score2+=1;
+    }
+    else {
+      erro = erro + " |Quadrado| "
     }
     if($("p[id='circulo']").attr('class') == $("img[alt='circulo']").attr('class')){
       score2+=1;
     }
+    else {
+      erro = erro + " |Círculo| "
+    }
     if($("p[id='retangulo']").attr('class') == $("img[alt='retangulo']").attr('class')){
       score2+=1;
     }
+    else {
+      erro = erro + " |Retântgulo| "
+    }
+
 
     $("h5[name='pontuacao2']").text("Pontuação: você fez " + score2 + " ponto(s)!");
+    $("h6[name='pontuacao3']").text("Veja o que você errou:" + erro);
 
 });
 
 $("button[name='limpar2']").click(function(){
 
   $("h5[name='pontuacao2']").text("Pontuação: ");
+  $("h6[name='pontuacao3']").text("Veja o que você errou: até agora você não errou nada!");
+  $("h6[name='pontuacao3']").text(":D");
 
   $("p[id='triangulo']").removeClass()
   $("p[id='triangulo']").addClass("prg-border-1")
