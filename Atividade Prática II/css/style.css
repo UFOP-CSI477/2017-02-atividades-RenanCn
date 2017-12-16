@@ -1,3 +1,10 @@
 #nav-style{
   background-color: lightgray;
 }
+
+.title-head{
+  width: 400px;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 15px;
+}
