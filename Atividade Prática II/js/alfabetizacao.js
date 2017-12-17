@@ -117,6 +117,24 @@ $("button[name='confirmar2']").click(function(){
     var circulo = "";
     var retangulo = "";
 
+    if($("p[id='triangulo']").attr('class') == $("p[id='quadrado']").attr('class') ||
+       $("p[id='triangulo']").attr('class') == $("p[id='circulo']").attr('class') ||
+       $("p[id='triangulo']").attr('class') == $("p[id='retangulo']").attr('class') ||
+       $("p[id='circulo']").attr('class') == $("p[id='quadrado']").attr('class') ||
+       $("p[id='circulo']").attr('class') == $("p[id='retangulo']").attr('class') ||
+       $("p[id='quadrado']").attr('class') == $("p[id='retangulo']").attr('class') ||
+       $("img[alt='triangulo']").attr('class') == $("img[alt='quadrado']").attr('class') ||
+       $("img[alt='triangulo']").attr('class') == $("img[alt='circulo']").attr('class') ||
+       $("img[alt='triangulo']").attr('class') == $("img[alt='retangulo']").attr('class') ||
+       $("img[alt='circulo']").attr('class') == $("img[alt='quadrado']").attr('class') ||
+       $("img[alt='circulo']").attr('class') == $("img[alt='retangulo']").attr('class') ||
+       $("img[alt='quadrado']").attr('class') == $("img[alt='retangulo']").attr('class')){
+         $("#alertaCor").slideDown();
+         return;
+    }
+
+    $("#alertaCor").hide();
+
     if($("p[id='triangulo']").attr('class') == $("img[alt='triangulo']").attr('class')){
       //alert("gg wp")
       score2+=1;
@@ -157,6 +175,8 @@ $("button[name='confirmar2']").click(function(){
 });
 
 $("button[name='limpar2']").click(function(){
+
+  $("#alertaCor").hide();
 
   $("h5[name='pontuacao2']").text("Pontuação: ");
   $("h6[name='pontuacao3']").text("");
