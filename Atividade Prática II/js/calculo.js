@@ -83,5 +83,10 @@ $(document).ready(function(){
 
   });
 
+  $("button[name='limpar']").click(function(){
+    $("img[alt='neutral']").hide();
+    $("img[alt='wtf']").hide();
+    $("img[alt='q']").hide();
+  });
 
 });
