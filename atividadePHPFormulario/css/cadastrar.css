@@ -1,0 +1,40 @@
+#cadastro{
+  font-family: Arial;
+  color: #4C0003;
+}
+
+h2{
+  margin-top: -0.5em;
+  margin-left: -0.4em;
+  margin-right: -0.4em;
+  font-family: Arial;
+  color: white;
+  background-color: #4C0003;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+}
+
+label{
+  font-weight: bold;
+  font-family: Arial;
+  color: #4C0003;
+}
+
+
+input[type=submit], input[type=reset]{
+  font-weight: bold;
+  background: #4C0003;
+  color: white;
+  border-style: solid;
+  border-color: #4C0003;
+  padding: 8px;
+}
+
+a{
+  background-color: #4C0003;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
